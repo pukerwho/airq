@@ -1,0 +1,30 @@
+.number-iterator {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: rgba(31, 41, 55, 1);
+  border-radius: 50%;
+}
+
+details {
+  .details-plus {
+    display: block;
+  }
+  .details-minus {
+    display: none;
+  }
+  &[open] {
+    .details-plus {
+      display: none;
+    }
+    .details-minus {
+      display: block;
+    }
+  }
+}
+
+summary {    
+  &::-webkit-details-marker {
+    display:none
+  }
+}
