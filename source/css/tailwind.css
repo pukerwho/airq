@@ -118,7 +118,7 @@ hr {
   @apply list-none px-2;
 }
 .current-lang {
-  @apply text-blue-700;
+  @apply text-orange-400;
 }
 .comment.depth-2 {
   @apply ml-2;

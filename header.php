@@ -38,8 +38,10 @@
 								</svg>
 							</div>
 						</div>
-		  			<div class="px-3">
-		  				UA
+		  			<div class="flex items-center lang px-3 -mx-3">
+		  				<?php if (function_exists('pll_the_languages')) { 
+	              pll_the_languages(); 
+	            } ?>
 		  			</div>
 		  		</div>
   			</div>
