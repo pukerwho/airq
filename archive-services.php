@@ -25,7 +25,7 @@
         <div class="flex justify-between">
           <div class="mr-6">
             <div class="text-2xl mb-4"><?php the_title(); ?></div>
-            <div class="w-full lg:w-10/12 text-sm lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam, accusamus iste reiciendis ad quidem magnam necessitatibus.</div>  
+            <div class="w-full lg:w-10/12 text-sm lg:text-lg"><?php echo carbon_get_the_post_meta('crb_services_description'); ?></div>  
           </div>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
