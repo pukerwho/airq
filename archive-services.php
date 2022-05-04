@@ -20,7 +20,7 @@
       <div class="flex relative bg-white dark:bg-dark-xl rounded-lg p-6 mb-6">
         <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
         <div class="hidden lg:block mr-6 mt-2">
-          <div class="w-4 h-4 flex items-center justify-center bg-gray-300 rounded-full"></div>
+          <img src="<?php echo get_the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>">
         </div>
         <div class="w-full flex justify-between">
           <div class="w-full mr-6">
