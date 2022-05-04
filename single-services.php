@@ -6,7 +6,7 @@
     <div class="container pb-48">
       <h1 class="text-4xl text-center uppercase mb-10" itemprop="headline"><?php the_title(); ?></h1>
       <div class="w-full lg:w-9/12 mx-auto">
-        <div class="text-xl mb-6">Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Officiis iure harum cumque fugit, eveniet quasi, reprehenderit accusantium laudantium iusto repudiandae.</div>
+        <div class="text-xl mb-6"><?php echo carbon_get_the_post_meta('crb_services_description'); ?></div>
       </div>
     </div>
   </div>
@@ -15,7 +15,7 @@
     <div class="w-full lg:w-9/12 mx-auto">
       <div><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="relative bg-orange-200 rounded-lg shadow-lg p-2 -mt-40 mb-10" loading="lazy" itemprop="image"></div>
       <div class="content mb-20" itemprop="articleBody"><?php the_content(); ?></div>
-      
+
     </div>
     <div class="mb-20">
       <?php get_template_part('template-parts/components/consultation'); ?>

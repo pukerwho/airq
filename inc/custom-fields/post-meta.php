@@ -48,6 +48,11 @@ function crb_post_theme_options() {
         Field::make( 'text', 'crb_flavors_tag', 'Tag' ),
       )),
   ) );  
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'services' )
+    ->add_fields( array(
+      Field::make( 'textarea', 'crb_services_description', 'Короткий опис' ),
+  ) );  
 }
 
 ?>
