@@ -20,11 +20,11 @@
       <div class="flex relative bg-white dark:bg-dark-xl rounded-lg p-6 mb-6">
         <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
         <div class="hidden lg:block mr-6 mt-2">
-          <img src="<?php echo get_the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>">
+          <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" alt="<?php the_title(); ?>" class="w-[96px] h-[96px] object-cover rounded">
         </div>
         <div class="w-full flex justify-between">
-          <div class="w-full mr-6">
-            <div class="text-2xl mb-4"><?php the_title(); ?></div>
+          <div class="w-full mr-3 lg:mr-6">
+            <div class="text-lg lg:text-2xl mb-4"><?php the_title(); ?></div>
             <div class="w-full lg:w-10/12 text-sm lg:text-lg"><?php echo carbon_get_the_post_meta('crb_services_description'); ?></div>  
           </div>
           <div>
