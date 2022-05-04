@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<main id="primary" class="bg-white dark:bg-dark-lg pt-28 lg:pt-24">
-		<div class="welcome border-b-8 border-orange-400 py-10 lg:py-32" style="background: url('https://thumb.tildacdn.com/tild3130-3665-4634-a131-386364353631/-/format/webp/home-top2-1440x495.jpg');background-size: cover;">
+		<div class="welcome border-b-8 border-orange-400 py-10 lg:py-32" style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/airq-welcome.jpeg');background-size: cover;">
 			<div class="container">
 				<div class="w-full lg:w-3/5">
 					<h1 class="text-4xl uppercase dark:text-dark-lg 00 mb-6"><?php _e('Професійна ароматизація приміщень', 'airq'); ?></h1>

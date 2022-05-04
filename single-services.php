@@ -30,7 +30,7 @@
           <ul class="flex items-center flex-wrap">
             <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class="breadcrumbs_item mr-8 pl-8">
               <a itemprop="item" href="<?php echo home_url(); ?>" class="text-orange-400 dark:text-orange-200">
-                <span itemprop="name"><?php _e( 'Главная', 'airq' ); ?></span>
+                <span itemprop="name"><?php _e( 'Головна', 'airq' ); ?></span>
               </a>                        
               <meta itemprop="position" content="1">
             </li>
