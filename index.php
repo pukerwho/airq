@@ -21,7 +21,7 @@
 			
 			<!-- Item -->
 			<div class="w-full relative flex items-center border-b-2">
-				<a href="#" class="absolute-link"></a>
+				<a href="/services-category/aromatyzatsiia-prymishchen/" class="absolute-link"></a>
 				<div class="w-2/12 px-4">
 					<div>01</div>
 				</div>
@@ -44,7 +44,7 @@
 
 			<!-- Item -->
 			<div class="w-full relative flex items-center border-b-2">
-				<a href="#" class="absolute-link"></a>
+				<a href="/services-category/aromatyzatsiia-zakhodiv/" class="absolute-link"></a>
 				<div class="w-2/12 px-4">
 					02
 				</div>
@@ -67,7 +67,7 @@
 
 			<!-- Item -->
 			<div class="w-full relative flex items-center border-b-2">
-				<a href="#" class="absolute-link"></a>
+				<a href="/products" class="absolute-link"></a>
 				<div class="w-2/12 px-4">
 					03
 				</div>
@@ -90,7 +90,7 @@
 
 			<!-- Item -->
 			<div class="w-full relative flex items-center">
-				<a href="#" class="absolute-link"></a>
+				<a href="/services/aromaklynynh-neitralyzatsyia-zapakhov/" class="absolute-link"></a>
 				<div class="w-2/12 px-4">
 					04
 				</div>
