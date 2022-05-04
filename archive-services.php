@@ -23,7 +23,7 @@
           <div class="w-4 h-4 flex items-center justify-center bg-gray-300 rounded-full"></div>
         </div>
         <div class="w-full flex justify-between">
-          <div class="mr-6">
+          <div class="w-full mr-6">
             <div class="text-2xl mb-4"><?php the_title(); ?></div>
             <div class="w-full lg:w-10/12 text-sm lg:text-lg"><?php echo carbon_get_the_post_meta('crb_services_description'); ?></div>  
           </div>
