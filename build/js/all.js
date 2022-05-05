@@ -223,6 +223,8 @@ if (form_consultation) {
     e.preventDefault()
     let this_form = form_consultation
     let data = new FormData(form_consultation)
+    console.log(data)
+    console.log('test')
     fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
       .then(response => consultationSuccessMessage(data, this_form))
       .catch(error => console.error('Error!', error.message))

@@ -12,7 +12,7 @@
       $current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
       $query = new WP_Query( array( 
         'post_type' => 'services', 
-        'posts_per_page' => 9,
+        'posts_per_page' => -1,
         'order'    => 'DESC',
         'paged' => $current_page,
       ) );
