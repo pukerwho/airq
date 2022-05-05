@@ -67,7 +67,7 @@
 
 <!-- CALLBACK MODAL -->
 <div class="modal" data-modal="callback">
-  <div class="modal_content w-full lg:w-2/5">
+  <div class="modal_content bg-white dark:bg-dark-lg w-full lg:w-2/5">
     <div class="modal_content_close">
       ✖️
     </div>
@@ -75,7 +75,7 @@
       <!-- ФОРМА -->
       <h2 class="text-3xl uppercase mb-10"><?php _e('Зворотній дзвінок', 'airq'); ?></h2>
       <form name="form_callback">
-        <input type="tel" name="Phone" placeholder="Ваш телефон" class="w-full custom-input" required>
+        <input type="tel" name="Телефон" placeholder="Ваш телефон" class="w-full custom-input" required>
         <button type="submit" class="w-full block bg-orange-400 hover:bg-orange-500 text-white rounded px-4 py-2">
           <?php _e('Замовити зворотній дзвінок', 'airq'); ?>
         </button>
@@ -90,7 +90,7 @@
 
 <!-- CONSULTATION MODAL -->
 <div class="modal" data-modal="consultation">
-  <div class="modal_content w-full lg:w-3/5">
+  <div class="modal_content bg-white dark:bg-dark-lg w-full lg:w-3/5">
     <div class="modal_content_close">
       ✖️
     </div>
