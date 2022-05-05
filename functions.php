@@ -287,7 +287,7 @@ function region_register_taxonomy() {
     'has_archive' => true,
     'sort' => true,
     'rewrite' => array(
-      'slug' => 'region',
+      'slug' => 'flavors-catagory',
       'with_front'    => true,
       'hierarchical' => true,
     ),

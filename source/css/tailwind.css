@@ -159,3 +159,7 @@ hr {
 .page-numbers.current {
   @apply bg-transparent text-gray-800 dark:text-gray-200 border border-gray-700 dark:border-gray-200;
 }
+
+.category-active {
+  @apply bg-orange-100;
+}
