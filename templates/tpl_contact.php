@@ -12,7 +12,7 @@ Template Name: Контакти
     <div class="container h-full flex items-center">
       <div class="relative bg-white text-white rounded-xl bg-opacity-10 backdrop-filter backdrop-blur-xl py-8 px-10">
         <h1 class="text-4xl text-center uppercase mb-6"><?php _e('Контакти', 'airq'); ?></h1>
-        <div class="mb-4"><?php echo carbon_get_theme_option('crb_address'); ?></div>
+        <div class="mb-4"><?php echo crb_get_i18n_theme_option('crb_address'); ?></div>
         <div class="mb-4">
           <a href="tel:<?php echo carbon_get_theme_option('crb_phone'); ?>"><?php echo carbon_get_theme_option('crb_phone'); ?></a>
         </div>
