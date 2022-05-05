@@ -214,7 +214,7 @@ document.addEventListener('click', function(e){
 });
 
 // Forms
-const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzKTNU_qFL4zIEnQ5H1Q-onmXSDlKfwAjQ6DvizUL-5QC0mutIv4DViFctJoYPQiA1u/exec'
+const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzofVPeIlVakQxjDcvPudor2HQmERMZdAd6s4XQ1Q/exec'
 
 // Форма - Консультація 
 const form_consultation = document.forms['form_consultation']
@@ -223,8 +223,6 @@ if (form_consultation) {
     e.preventDefault()
     let this_form = form_consultation
     let data = new FormData(form_consultation)
-    console.log(data)
-    console.log('test')
     fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
       .then(response => consultationSuccessMessage(data, this_form))
       .catch(error => console.error('Error!', error.message))

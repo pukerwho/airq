@@ -62,7 +62,7 @@ document.addEventListener('click', function(e){
 });
 
 // Forms
-const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzKTNU_qFL4zIEnQ5H1Q-onmXSDlKfwAjQ6DvizUL-5QC0mutIv4DViFctJoYPQiA1u/exec'
+const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzofVPeIlVakQxjDcvPudor2HQmERMZdAd6s4XQ1Q/exec'
 
 // Форма - Консультація 
 const form_consultation = document.forms['form_consultation']
