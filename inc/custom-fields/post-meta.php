@@ -9,6 +9,7 @@ function crb_post_theme_options() {
     ->where( 'post_type', '=', 'products' )
     ->add_fields( array(
       Field::make( 'media_gallery', 'crb_product_photos', 'Фотографії' )->set_type( array( 'image' ) ),
+      Field::make( 'checkbox', 'crb_product_top', 'Топ?' ),
       Field::make( 'separator', 'crb_separate_charakter', 'Характеристики' ),
       Field::make( 'text', 'crb_product_how_work', 'Принцип роботи' ),
       Field::make( 'text', 'crb_product_objem', "Об'єм покриття" ),
