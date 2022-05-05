@@ -34,7 +34,7 @@
         <h1 class="text-3xl uppercase mb-6"><?php the_title(); ?></h1>
         <div class="content text-lg text-gray-700 dark:text-gray-200 mb-6">ароматизация средних помещений</div>
         <div class="border-b border-gray-300 pb-6 mb-6">
-          <div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg px-10 py-3"><?php _e('Замовити', 'airq'); ?></div>
+          <div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg cursor-pointer px-10 py-3 modal-js" data-modal="consultation"><?php _e('Замовити', 'airq'); ?></div>
         </div>
         <div class="mb-20">
           <details class="bg-light rounded-lg border-b border-gray-300 pb-6 mb-6">
