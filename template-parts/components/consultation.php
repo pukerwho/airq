@@ -8,6 +8,7 @@
   <div>
     <?php get_template_part('template-parts/components/form-consultation'); ?>
   </div>
+  <div class="form_consultation_success"><?php _e("Дякую, ми отримали вашу заявку. Найближчим часом ми з вами зв'яжемося.", "airq"); ?></div>
 </div>
 <div class="w-full lg:w-8/12">
   <div>

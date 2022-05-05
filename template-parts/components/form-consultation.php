@@ -1,4 +1,4 @@
-<form name="form_consultant">
+<form name="form_consultation">
   <div class="flex flex-col lg:flex-row lg:-mx-4">
     <div class="lg:px-4 mb-2 lg:mb-0">
       <input type="text" name="Name" placeholder="Ваше ім'я" class="w-full custom-input" required>
@@ -12,5 +12,4 @@
       </button>
     </div>
   </div>
-  
 </form>
