@@ -184,6 +184,35 @@ $('.js-toggle-light').on('click', function(){
   }
 });
 
+// Modals
+function openModal(attrModal) {
+  $('.modal[data-modal='+attrModal+']').addClass('open');
+  $('.modal-bg').removeClass('hidden').addClass('z-10');
+  $('body').addClass('overflow-hidden');
+}
+
+function closeModal(attrModal) {
+  $('.modal').removeClass('open');
+  $('.modal-bg').addClass('hidden').removeClass('z-10');
+  $('body').removeClass('overflow-hidden');
+}
+
+$('.modal-js').on('click', function(e){
+  var clickModalData = $(this).data('modal');
+  var clickModalTitle = $(this).data('title');
+  openModal(clickModalData);
+});
+
+$('.modal_content_close').on('click', function(){
+  closeModal();
+});
+
+document.addEventListener('click', function(e){
+  if(e.target.classList.value === 'modal open') {
+    closeModal();
+  }
+});
+
 // Forms
 const modalScriptURL = 'https://script.google.com/macros/s/AKfycbzKTNU_qFL4zIEnQ5H1Q-onmXSDlKfwAjQ6DvizUL-5QC0mutIv4DViFctJoYPQiA1u/exec'
 
@@ -203,6 +232,29 @@ if (form_consultation) {
 function consultationSuccessMessage(data, this_form){
   this_form.reset();
   $('.form_consultation_success').addClass('block my-4').removeClass('hidden');
+  // ga('send', {
+  //   hitType: 'event',
+  //   eventCategory: 'Форма',
+  //   eventAction: 'Отправили вопрос',
+  // })
+}
+
+// Форма - Callback 
+const form_callback = document.forms['form_callback']
+if (form_callback) {
+  form_callback.addEventListener('submit', e => {
+    e.preventDefault()
+    let this_form = form_callback
+    let data = new FormData(form_callback)
+    fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => callbackSuccessMessage(data, this_form))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
+
+function callbackSuccessMessage(data, this_form){
+  this_form.reset();
+  $('.form_callback_success').addClass('block my-4').removeClass('hidden');
   // ga('send', {
   //   hitType: 'event',
   //   eventCategory: 'Форма',

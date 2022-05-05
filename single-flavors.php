@@ -34,7 +34,7 @@
           <h4 class="uppercase mb-2"><?php _e('Колекція', 'airq'); ?></h4>
           <div><?php echo carbon_get_the_post_meta('crb_flavors_collections'); ?></div>
         </div>
-        <div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg px-10 py-3"><?php _e('Консультація', 'airq'); ?></div>
+        <div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg cursor-pointer px-10 py-3 modal-js" data-modal="consultation"><?php _e('Консультація', 'airq'); ?></div>
       </div>
     </div>
     <!-- Other flovers -->

@@ -6,7 +6,7 @@
 				<div class="w-full lg:w-3/5">
 					<h1 class="text-4xl uppercase dark:text-dark-lg 00 mb-6"><?php _e('Професійна ароматизація приміщень', 'airq'); ?></h1>
 					<div class="text-xl dark:text-dark-lg leading-8 mb-10"><?php _e('Prolitec ® є провідним постачальником послуг з ароматизації навколишнього середовища та нейтралізації комерційних запахів, та допомагає брендам у 83 країнах покращити якість обслуговування клієнтів.', 'airq'); ?></div>
-					<div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg px-4 lg:px-10 py-3"><?php _e('Замовити зворотній дзвінок', 'airq'); ?></div>
+					<div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg cursor-pointer px-4 lg:px-10 py-3 modal-js" data-modal="callback" ><?php _e('Замовити зворотній дзвінок', 'airq'); ?></div>
 				</div>
 			</div>
 		</div>
