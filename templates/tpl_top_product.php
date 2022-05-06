@@ -63,7 +63,10 @@ Template Post Type: products
             <img src="<?php echo $block['crb_product_top_img']; ?>">
           </div>
           <div class="w-full lg:w-1/2 lg:px-4">
-            <div class="content"><?php echo $block['crb_product_top_text']; ?></div>
+            <div class="content">
+              <?php $block_text = $block['crb_product_top_text']; ?>
+              <?php echo apply_filters( 'the_content', $block_text  ); ?> 
+            </div>
           </div>
         </div>
       <?php endforeach; ?>
