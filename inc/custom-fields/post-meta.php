@@ -13,6 +13,7 @@ function crb_post_theme_options() {
 	Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'products' )
     ->add_fields( array(
+      Field::make( 'textarea', 'crb_product_description', 'Короткий опис' ),
       Field::make( 'media_gallery', 'crb_product_photos', 'Фотографії' )->set_type( array( 'image' ) ),
       
       Field::make( 'checkbox', 'crb_product_top', 'Топ?' ),

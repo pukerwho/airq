@@ -32,7 +32,7 @@
       </div>
       <div class="w-full lg:w-1/2 lg:px-6">
         <h1 class="text-3xl uppercase mb-6"><?php the_title(); ?></h1>
-        <div class="content text-lg text-gray-700 dark:text-gray-200 mb-6">ароматизация средних помещений</div>
+        <div class="content text-lg text-gray-700 dark:text-gray-200 mb-6"><?php echo carbon_get_the_post_meta('crb_product_description'); ?></div>
         <div class="border-b border-gray-300 pb-6 mb-6">
           <div class="inline-block bg-orange-400 text-lg text-white text-center rounded-lg cursor-pointer px-10 py-3 modal-js" data-modal="consultation"><?php _e('Замовити', 'airq'); ?></div>
         </div>
