@@ -59,6 +59,9 @@ function crb_post_theme_options() {
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'flavors' )
     ->add_fields( array(
+      Field::make( 'complex', 'crb_flavors_colors', 'Кольори' )->set_layout('tabbed-vertical')->add_fields( array(
+        Field::make( 'color', 'crb_flavor_color', 'Кольор' ),
+      )),
       Field::make( 'text', 'crb_flavors_subtitle', 'Підзаголовок' ),
       Field::make( 'text', 'crb_flavors_family', 'Сімейство' ),
       Field::make( 'text', 'crb_flavors_collections', 'Колекція' ),

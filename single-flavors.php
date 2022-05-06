@@ -23,8 +23,17 @@
           <?php endforeach; ?>
         </div>
         <div class="content mb-6"><?php the_content(); ?></div>
-        <div class="text-lg mb-6">
+        <div class="text-lg mb-2">
           <h4 class="uppercase mb-2"><?php _e('Колірна гама аромату', 'airq'); ?></h4>
+          <div class="flex items-center -mx-2">
+            <?php 
+            $flavor_colors = carbon_get_the_post_meta('crb_flavors_colors');
+            foreach ($flavor_colors as $color): ?>
+              <div class="px-2 mb-4">
+                <div class="rounded-full" style="width: 42px; height: 42px; background: <?php echo $color['crb_flavor_color']; ?>"></div>
+              </div>
+            <?php endforeach; ?>
+          </div>
         </div>
         <div class="text-lg mb-6">
           <h4 class="uppercase mb-2"><?php _e('Сімейство', 'airq'); ?></h4>
