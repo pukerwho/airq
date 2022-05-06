@@ -372,6 +372,12 @@ function myplugin_ajaxurl() {
   </script>';
 }
 
+function my_custom_upload_mimes($mimes = array()) {
+    $mimes['svg'] = "image/svg+xml";
+    return $mimes;
+}
+add_action('upload_mimes', 'my_custom_upload_mimes');
+
 //CARBON FIELDS + WPML
 function crb_get_i18n_suffix() {
     $suffix = '';

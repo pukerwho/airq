@@ -368,3 +368,6 @@ summary::-webkit-details-marker {
     background-color: #e5ffed; }
   .product-block:nth-of-type(3n) {
     background-color: #eef8ff; }
+
+.dark .product-block {
+  background-color: #1b1e21; }
