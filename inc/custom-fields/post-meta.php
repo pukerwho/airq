@@ -3,13 +3,29 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+$employees_labels = array(
+    'plural_name' => 'Employees',
+    'singular_name' => 'Employee',
+);
+
 add_action( 'carbon_fields_register_fields', 'crb_post_theme_options' );
 function crb_post_theme_options() {
 	Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'products' )
     ->add_fields( array(
       Field::make( 'media_gallery', 'crb_product_photos', 'Фотографії' )->set_type( array( 'image' ) ),
+      
       Field::make( 'checkbox', 'crb_product_top', 'Топ?' ),
+      Field::make( 'complex', 'crb_product_top_content', 'Blocks' )->set_conditional_logic( array(
+        array(
+          'field' => 'crb_product_top',
+          'value' => '1', 
+          'compare' => '=',
+        )
+      ))->set_layout('tabbed-horizontal')->add_fields( array(
+        Field::make( 'rich_text', 'crb_product_top_text', 'Контент' ),
+        Field::make( 'image', 'crb_product_top_img', 'Картинка' )->set_value_type( 'url'),
+      )),
       Field::make( 'separator', 'crb_separate_charakter', 'Характеристики' ),
       Field::make( 'text', 'crb_product_how_work', 'Принцип роботи' ),
       Field::make( 'text', 'crb_product_objem', "Об'єм покриття" ),
@@ -38,6 +54,7 @@ function crb_post_theme_options() {
       Field::make( 'text', 'crb_product_material_korpus', 'Матеріал корпуса' ),
       Field::make( 'text', 'crb_product_defend', 'Захист' ),
       Field::make( 'text', 'crb_product_colors', 'Кольори' ),
+
   ) );
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'flavors' )

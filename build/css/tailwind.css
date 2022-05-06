@@ -1869,4 +1869,12 @@ hr {
   .lg\:leading-12 {
     line-height: 3rem;
   }
+
+  .odd\:lg\:flex-row:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .even\:lg\:flex-row-reverse:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
