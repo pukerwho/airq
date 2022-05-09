@@ -54,6 +54,7 @@
           'posts_per_page' => -1,
           'order'    => 'DESC',
           'paged' => $current_page,
+          'post__not_in' => array(274, 380),
         ) );
       if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
         <div class="w-full lg:w-1/3 lg:px-4 mb-6">
