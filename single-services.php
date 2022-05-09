@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<main id="primary bg-white" itemscope itemtype="http://schema.org/Article">
-  <div class="bg-custom-gray dark:bg-dark-lg pt-40">
+<main id="primary" class="bg-white dark:bg-dark-lg" itemscope itemtype="http://schema.org/Article">
+  <div class="bg-custom-gray dark:bg-dark-xl pt-40">
     <div class="container pb-48">
       <h1 class="text-4xl text-center uppercase mb-10" itemprop="headline"><?php the_title(); ?></h1>
       <div class="w-full lg:w-9/12 mx-auto">

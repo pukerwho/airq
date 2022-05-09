@@ -7,6 +7,7 @@
       a:hover {
         color: #f3913a;
       }
+
       .sub-menu {
         display: none;
         position: absolute;
@@ -25,6 +26,10 @@
       .menu-item-has-children:hover .sub-menu {display: block;}
     }
   }
+}
+
+.dark .header_bottom_menu .sub-menu {
+  background-color: #374151;
 }
 
 .hamburger-toggle {
