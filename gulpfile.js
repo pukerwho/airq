@@ -1,6 +1,7 @@
 // gulpfile.js
 const { watch, series, src, dest } = require("gulp");
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const purgecss = require('gulp-purgecss');
 const concat = require('gulp-concat');

@@ -119,24 +119,36 @@ document.addEventListener('click', function(e){
   }
 });
 
-// Forms
-const modalScriptURL = 'https://script.google.com/macros/s/AKfycbyrQpWsvToupj35SIxRGT7PZYgrn4kpINGgk1ZKCL8ExXYEMlQ/exec'
-
 // Форма - Консультація 
+function sendTelegram(username, userphone, sitepage) {
+  jQuery.ajax({
+    method: 'post',
+    url: ajaxurl,
+    data: {
+      'user_name': username,
+      'user_phone': userphone,
+      'site_page': sitepage,
+      'action': 'send_telegram_message_action',
+    }
+  }).success(function (msg) {
+    console.log(msg);
+    consultationSuccessMessage();
+  });
+}
+
 const form_consultation = document.forms['form_consultation']
 if (form_consultation) {
   form_consultation.addEventListener('submit', e => {
     e.preventDefault()
-    let this_form = form_consultation
-    let data = new FormData(form_consultation)
-    fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
-      .then(response => consultationSuccessMessage(data, this_form))
-      .catch(error => console.error('Error!', error.message))
+    username = $('.input-username').val();
+    userphone = $('.input-userphone').val();
+    sitepage = window.location.href;
+    sendTelegram(username, userphone, sitepage);
   })  
 }
 
 function consultationSuccessMessage(data, this_form){
-  this_form.reset();
+  // this_form.reset();
   $('.form_consultation_success').addClass('block my-4').removeClass('hidden');
   // ga('send', {
   //   hitType: 'event',
