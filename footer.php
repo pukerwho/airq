@@ -16,7 +16,7 @@
     <div class="flex justify-between flex-wrap lg:-mx-4">
       <div class="w-full lg:w-4/12 lg:px-4 mb-6 lg:mb-0">
         <div class="w-full lg:w-7/12">
-          <div class="mb-4"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/prolitec_logo.png" alt="Logo" class="w-full"></a></div>
+          <div class="w-1/3 lg:w-full mb-4"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/prolitec_logo.png" alt="Logo" class="w-full"></a></div>
           <div>© Prolitec 2005 - 2022</div>  
         </div>
         

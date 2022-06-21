@@ -8,7 +8,7 @@ function crb_term_options() {
   Container::make( 'term_meta', __( 'Term Options', 'crb' ) )
   ->where( 'term_taxonomy', '=', 'services-category' ) // only show our new field for categories
   ->add_fields( array(
-    // Field::make( 'textarea', 'crb_service_cat_description', 'Короткий опис' ),
+    Field::make( 'rich_text', 'crb_service_cat_content', 'SEO текст' ),
   ));
 }
 

@@ -49,6 +49,12 @@
         
       </div>
     <?php endwhile; endif; wp_reset_postdata(); ?>
+    <div class="content pt-20">
+      <?php 
+        $categoryText = carbon_get_term_meta($current_cat_id, 'crb_service_cat_content');
+        echo apply_filters( 'the_content', $categoryText  ); 
+      ?>	
+    </div>
   </div>
 </main>
 

@@ -50,7 +50,7 @@
   	<div class="header_bottom py-3 lg:py-2">
   		<div class="container">
   			<div class="flex items-center justify-between lg:-mx-4">
-  				<div class="w-2/3 lg:w-2/12 lg:px-4">
+  				<div class="w-1/3 lg:w-2/12 lg:px-4">
   					<a href="<?php echo home_url(); ?>">
 	  					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/prolitec_logo.png" alt="LOGO" class="w-full">
 	  				</a>
