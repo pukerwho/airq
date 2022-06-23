@@ -13,9 +13,15 @@
   
   <div class="container">
     <div class="w-full lg:w-9/12 mx-auto">
-      <div><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="relative bg-orange-200 rounded-lg shadow-lg p-2 -mt-40 mb-10" loading="lazy" itemprop="image"></div>
+      <div><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="w-full relative bg-orange-200 rounded-lg shadow-lg p-2 -mt-40 mb-10" loading="lazy" itemprop="image"></div>
+      <div class="post-time-read text-gray-800 dark:text-gray-300 opacity-75 mb-6"><span></span> <?php _e("хв читання", "airq"); ?></div>
+      <div class="single-services_subjects mb-5">
+        <div class="text-2xl font-bold mb-3">
+          <?php _e('Зміст','airq'); ?>:
+        </div>
+        <div class="single-services_subjects_inner bg-orange-100 text-gray-800 dark:text-gray-800 rounded-lg p-6"></div>
+      </div>
       <div class="content mb-20" itemprop="articleBody"><?php the_content(); ?></div>
-
     </div>
     <div class="mb-20">
       <?php get_template_part('template-parts/components/consultation'); ?>
