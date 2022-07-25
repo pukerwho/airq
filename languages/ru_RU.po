@@ -241,3 +241,6 @@ msgstr "Содержание"
 
 msgid "хв читання"
 msgstr "мин чтения"
+
+msgid "Всі"
+msgstr "Все"
