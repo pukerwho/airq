@@ -235,3 +235,9 @@ for (anchor of anchors) {
     })
   }
 }
+
+// (B) PREVENT CLIPBOARD COPYING
+document.addEventListener("copy", (evt) => {
+  // (B2) PREVENT THE DEFAULT COPY ACTION
+  evt.preventDefault();
+}, false);
