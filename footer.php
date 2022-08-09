@@ -25,7 +25,7 @@
         <h3 class="uppercase mb-4"><?php _e('Навігація', 'airq'); ?></h3>
         <div>
           <?php wp_nav_menu([
-            'theme_location' => 'header',
+            'theme_location' => 'footer_info',
             'container' => 'div',
             'menu_class' => 'flex flex-col'
           ]); ?> 
