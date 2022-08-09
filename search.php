@@ -6,7 +6,7 @@
         <div class="text-3xl lg:text-4xl text-center font-bold">
           <?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Результаты поиска для запроса: %s', 'g-info' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Результати пошуку для запиту: %s', 'treba-wp' ), '<span>' . get_search_query() . '</span>' );
 					?>
         </div>
       </div>

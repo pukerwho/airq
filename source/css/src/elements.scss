@@ -23,7 +23,9 @@
           }
         }
       }
-      .menu-item-has-children:hover .sub-menu {display: block;}
+      .menu-item-has-children:hover .sub-menu {
+        display: block;
+      }
     }
   }
 }
@@ -62,7 +64,7 @@
 .mobile-menu {
   a {
     display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0.75rem 0;
   }
   li {
@@ -82,7 +84,7 @@
 
 .bullet {
   font-size: 12px;
-  color: #2257DA;
+  color: #2257da;
   list-style-type: disc;
   padding-bottom: 10px;
 }
@@ -91,7 +93,7 @@
   &_item {
     position: relative;
     &:first-of-type {
-      background: url('../../img/home.svg');
+      background: url("../../img/home.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -101,12 +103,13 @@
       }
     }
     &:after {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       position: absolute;
-      top: 51%; right: -2rem;
-      background: url('../../img/breadcrumbs-arrow.svg');
+      top: 51%;
+      right: -2rem;
+      background: url("../../img/breadcrumbs-arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       -webkit-transform: translateY(-50%) translateX(-100%);
