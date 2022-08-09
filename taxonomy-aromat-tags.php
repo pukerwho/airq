@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <?php 
-  $categories = get_terms(array( 'taxonomy' => 'flavors-catagory' )); 
+  $categories = get_terms(array( 'taxonomy' => 'flavors-catagory' ));
   $tags = get_terms(array( 'taxonomy' => 'aromat-tags' )); 
+  $current_cat_id = get_queried_object_id();
 ?>
 
 <main id="primary" class="bg-custom-gray dark:bg-dark-lg pt-40">
   <div class="container pb-24">
-    <h1 class="text-4xl text-center uppercase mb-6"><?php _e('Аромати', 'airq'); ?></h1>
-    <div class="text-xl text-center text-gray-700 dark:text-gray-300 mb-12"><?php _e('У нашій колекції понад 1000 унікальних ароматів', 'airq'); ?></div>
+    <h1 class="text-4xl text-center uppercase mb-12"><?php single_term_title(); ?></h1>
     <div class="flex flex-wrap flex-col lg:flex-row lg:-mx-6">
       <div class="w-full lg:w-1/4 lg:px-6 mb-10 lg:mb-0">
         <div class="mb-2"><a href="<?php echo get_post_type_archive_link('flavors'); ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php _e('Всі', 'airq'); ?></a></div>
@@ -30,6 +30,15 @@
               'posts_per_page' => -1,
               'order'    => 'DESC',
               'paged' => $current_page,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'aromat-tags',
+                  'terms' => $current_cat_id,
+                  'field' => 'term_id',
+                  'include_children' => true,
+                  'operator' => 'IN'
+                )
+              ),
             ) );
           if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
             <div class="w-full lg:w-1/3 lg:px-4">
