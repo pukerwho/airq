@@ -9,7 +9,7 @@
 <main id="primary" class="bg-custom-gray dark:bg-dark-lg pt-40">
   <div class="container pb-24">
     <h1 class="text-4xl text-center uppercase mb-12"><?php single_term_title(); ?></h1>
-    <div class="flex flex-wrap flex-col lg:flex-row lg:-mx-6">
+    <div class="flex flex-wrap flex-col lg:flex-row lg:-mx-6 mb-12">
       <div class="w-full lg:w-1/4 lg:px-6 mb-10 lg:mb-0">
         <div class="mb-2"><a href="<?php echo get_post_type_archive_link('flavors'); ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php _e('Всі', 'airq'); ?></a></div>
         <?php foreach($categories as $category): ?>
