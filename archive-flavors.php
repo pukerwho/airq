@@ -11,19 +11,16 @@
     <div class="text-xl text-center text-gray-700 dark:text-gray-300 mb-12"><?php _e('У нашій колекції понад 1000 унікальних ароматів', 'airq'); ?></div>
     <div class="flex flex-wrap flex-col lg:flex-row lg:-mx-6">
       <div class="w-full lg:w-1/4 lg:px-6">
-        <div class="sticky lg:top-[110px]">
-          <div class="mb-2"><a href="<?php echo get_post_type_archive_link('flavors'); ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php _e('Всі', 'airq'); ?></a></div>
-          <?php foreach($categories as $category): ?>
-            <div class="mb-2"><a href="<?php echo get_term_link($category->term_id, 'flavors-catagory') ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php echo $category->name; ?></a></div>
-          <?php endforeach; ?>
-        </div>
+        <div class="mb-2"><a href="<?php echo get_post_type_archive_link('flavors'); ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php _e('Всі', 'airq'); ?></a></div>
+        <?php foreach($categories as $category): ?>
+          <div class="mb-2"><a href="<?php echo get_term_link($category->term_id, 'flavors-catagory') ?>" class="block bg-white dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php echo $category->name; ?></a></div>
+        <?php endforeach; ?>
       </div>
       <div class="w-full lg:w-3/4 lg:px-6">
         <div class="flex items-center flex-wrap -mx-1 mb-6">
           <?php foreach($tags as $tag): ?>
             <div class="px-1 mb-2"><a href="<?php echo get_term_link($tag->term_id, 'aromat-tags') ?>" class="block bg-gray-200 border border-gray-400 dark:bg-dark-xl hover:bg-orange-100 dark:hover:bg-dark-md rounded px-4 py-2"><?php echo $tag->name; ?></a></div>
           <?php endforeach; ?>
-          
         </div>
         <div class="flex flex-wrap lg:-mx-4 mb-20">
           <?php 
