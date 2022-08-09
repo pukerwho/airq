@@ -113,6 +113,12 @@
 </div>
 <!-- END CONSULTATION MODAL -->
 
+<div class="search-modal hidden w-full h-full fixed top-0 left-0 right-0 z-11">
+  <div class="search-form w-full lg:w-2/3 relative top-[50px] lg:top-[125px] px-4 lg:px-20 lg:mx-auto">
+    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+  </div>
+</div>
+
 <div class="modal-bg hidden"></div>
 
 <!-- not use -->

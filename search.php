@@ -1,53 +1,26 @@
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package G-Info
- */
+<?php get_header(); ?>
 
-get_header();
-?>
-
-	<main id="primary">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header>
-				<h1>
-					<?php
+	<main id="primary" class="page-padding">
+    <div class="container">
+      <div class="mb-12">
+        <div class="text-3xl lg:text-4xl text-center font-bold">
+          <?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'g-info' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Результаты поиска для запроса: %s', 'g-info' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
-			</header>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:-mx-8 mb-12">
+        <!-- Основной поток -->
+        <div class="w-full lg:w-8/12 justify-center px-0 lg:px-8 mx-auto">
+          <div class="content">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							<div><?php the_title(); ?></div>
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
